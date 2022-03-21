@@ -49,6 +49,7 @@ func (m RouteContext) Get_ProduceRoute(c *gin.Context) {
 		if p == nil {
 			produce = nil
 		}
+		produce = p
 	} 
 
 	if err != nil && produce == nil {
