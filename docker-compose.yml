@@ -1,0 +1,26 @@
+version: "3.0"
+services:
+  web:
+    depends_on:
+      - mongo
+    container_name: gongo
+    build: "./"
+    ports:
+      - "8080:8080"
+      - "2345:2345"
+    stdin_open: true
+    command: dlv debug --headless --listen=:2345 --api-version=2 --log main.go --check-go-version=false
+  mongo:
+    image: 'mongo:4.2.6-bionic'
+    container_name: mongo
+    volumes:
+      - ./mongodata:/data/db
+    restart: always
+  mongo_express:
+    image: mongo-express
+    container_name: mongo_express
+    depends_on:
+      - 'mongo'
+    ports:
+      - '8081:8081'
+    restart: always
