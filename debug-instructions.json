@@ -1,0 +1,6 @@
+{
+    "build-and-start-containers": "docker-compose up --build",
+    "vscode-run-debug-launch": {
+        "description": "Wait till Gongo starts up fully, then in VSCODE run debug Launch, this configuration is provided by default under the .vscode folder."
+    }
+}

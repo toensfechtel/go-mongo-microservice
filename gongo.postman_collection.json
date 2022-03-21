@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "8fbd70b7-acaa-4f7e-98bf-7479645cce66",
+		"name": "gongo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Produce",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/produce",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"produce"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Specific Produce",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/produce/A12T-4GH7-QPL9-3N4M",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"produce",
+						"A12T-4GH7-QPL9-3N4M"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Specific Produce",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/produce/A12T-4GH7-QPL9-3N4M",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"produce",
+						"A12T-4GH7-QPL9-3N4M"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Produce Item",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"Produce\": [\r\n        {\r\n            \"ProduceName\": \"Dragon Fruit\",\r\n            \"UnitPrice\": 3.46\r\n        },\r\n        {\r\n            \"ProduceName\": \"Gopher Fruit\",\r\n            \"UnitPrice\": 3.46\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/produce",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"produce"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Invalid Produce Palyload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"Stuff\": [\r\n        {\r\n            \"ProduceName\": \"Dragon Fruit\",\r\n            \"UnitPrice\": 3.46\r\n        },\r\n        {\r\n            \"ProduceName\": \"Gopher Fruit\",\r\n            \"UnitPrice\": 3.46\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/produce",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"produce"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Route not found",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

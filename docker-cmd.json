@@ -1,0 +1,10 @@
+{
+    "spin-up-build-docker-file": "docker build -t envoy-proxy -f Dockerfile-proxy .",
+    "list-containers": "docker ps",
+    "list-networks": "docker network ls",
+    "remove-container": "docker container rm [id]",
+    "remove-network": "docker network rm [name]",
+    "docker-run-container": "docker run -d -it -p 8080:8080 [name]",
+    "docker-stop-container": "docker stop [id]",
+    "docker-run-container-bash": "docker exec -it [name] bash"
+}
