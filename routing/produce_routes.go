@@ -27,7 +27,7 @@ type GetProduceResult struct {
 	Err string
 }
 //get produce route handler
-func (m RouteContext) Get_ProduceRoute(c *gin.Context) {
+func (m *RouteContext) Get_ProduceRoute(c *gin.Context) {
 	//get path paramter => this corresponds to code => /produce/:code
 	produceCode := c.Param(ENTITITY_IDENTIFIER)
 	
@@ -79,7 +79,7 @@ type DeleteProduceResult struct {
 	Err string
 }
 //delete produce route handler
-func (m RouteContext) Delete_ProduceRoute(c *gin.Context) {
+func (m *RouteContext) Delete_ProduceRoute(c *gin.Context) {
 	//get path paramter => this corresponds to code => /produce/:code
 	produceCode := c.Param(ENTITITY_IDENTIFIER)
 	//if a produce code is not provided then a bad request is sent back
@@ -115,7 +115,7 @@ type CreateProduceResult struct {
 	Err          string
 }
 //add produce route handler
-func (m RouteContext) Add_ProduceRoute(c *gin.Context) {
+func (m *RouteContext) Add_ProduceRoute(c *gin.Context) {
 	//a list IDs => for all x in produceAdded, then x is an id of a produce
 	//that was succesfully added to the datasource
 	produceAdded := []interface{}{}
